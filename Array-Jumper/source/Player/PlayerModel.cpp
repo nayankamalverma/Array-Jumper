@@ -2,6 +2,30 @@
 
 namespace Player
 {
+	PlayerModel::PlayerModel()
+	{
+		
+	}
+
+	PlayerModel::~PlayerModel()
+	{
+		
+	}
+	void PlayerModel::initialize()
+	{
+		player_state = PlayerState::ALIVE;
+	}
+	void PlayerModel::update()
+	{
+		
+	}
+
+	void PlayerModel::render()
+	{
+		
+	}
+
+
 	PlayerState PlayerModel::getPlayerState()
 	{
 		return player_state;

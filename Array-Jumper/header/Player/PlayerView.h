@@ -7,6 +7,7 @@ namespace Player
 
 	class PlayerView
 	{
+		PlayerController* player_controller;
 		UI::UIElement::ImageView* player_image;
 		sf::RenderWindow* game_window;
 
@@ -22,7 +23,7 @@ namespace Player
 		
 
 	public:
-		PlayerView();
+		PlayerView(PlayerController* player_controller);
 		virtual ~PlayerView();
 
 		void initialize();
