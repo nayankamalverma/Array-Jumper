@@ -16,6 +16,13 @@ namespace Player
 
 	public:
 
+		PlayerModel();
+		~PlayerModel();
+
+		void initialize();
+		void update();
+		void render();
+
 		//getter setter
 		//position
 		int getCurrentPosition();
