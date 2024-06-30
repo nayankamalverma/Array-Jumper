@@ -6,7 +6,7 @@ namespace Level
 
     struct LevelData
     {
-        int number_of_boxes = 10;
+        static const int number_of_boxes = 10;
         BlockType level_boxes[number_of_boxes]= {
             BlockType::ONE,
             BlockType::TWO,
