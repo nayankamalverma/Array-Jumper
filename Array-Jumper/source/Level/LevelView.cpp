@@ -180,4 +180,10 @@ namespace Level
 		delete(obstacle_two_overlay_image);
 	}
 
+	BoxDimensions LevelView::getBoxDimensions()
+	{
+		return box_dimensions;
+	}
+
+
 }
