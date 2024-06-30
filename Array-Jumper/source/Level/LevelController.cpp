@@ -32,4 +32,10 @@ namespace Level
 	{
 		return level_model->getCurrentBoxValue(currentPosition);
 	}
+
+	BoxDimensions LevelController::getBoxDimensions()
+	{
+		return  level_view->getBoxDimensions();
+	}
+
 }

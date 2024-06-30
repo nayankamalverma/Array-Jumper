@@ -1,9 +1,6 @@
 ﻿#pragma once
 #include <initializer_list>
 
-#include "PlayerModel.h"
-#include "PlayerView.h"
-
 namespace Player
 {
 	class PlayerView;
@@ -15,6 +12,7 @@ namespace Player
 		PlayerView* player_view;
 		PlayerModel* player_model;
 
+		void resetPlayer();
 		void destroy();
 
 	public:
@@ -27,5 +25,7 @@ namespace Player
 
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
+
+		int getCurrentPosition();
 	};
 }
