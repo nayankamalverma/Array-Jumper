@@ -31,4 +31,7 @@ namespace Gameplay
 		gameplay_controller->onPositionChanged(position);
 	}
 
+	void GameplayService::onDeath() { gameplay_controller->onDeath(); }
+
+
 }
