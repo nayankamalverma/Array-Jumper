@@ -9,17 +9,17 @@ namespace Level
     private:
 
 
-        BlockType level_1[LevelData::NUMBER_OF_BOXES] =
+        BlockType level_1[LevelData::number_of_boxes] =
         {
             ONE, TWO, OBSTACLE_ONE, TWO, THREE, ONE, OBSTACLE_TWO, TWO, ONE, TARGET
         };
 
-        BlockType level_2[LevelData::NUMBER_OF_BOXES] =
+        BlockType level_2[LevelData::number_of_boxes] =
         {
             ONE, TWO, OBSTACLE_TWO, ONE, TWO, OBSTACLE_ONE, THREE, OBSTACLE_ONE, ONE, TARGET
         };
 
-        BlockType level_3[LevelData::NUMBER_OF_BOXES] =
+        BlockType level_3[LevelData::number_of_boxes] =
         {
             ONE, THREE, OBSTACLE_ONE, OBSTACLE_TWO, ONE, TWO, OBSTACLE_ONE, TWO, ONE, TARGET
         };
@@ -30,17 +30,17 @@ namespace Level
 
         LevelConfiguration()
         {
-            for (int i = 0; i < LevelData::NUMBER_OF_BOXES; i++)
+            for (int i = 0; i < LevelData::number_of_boxes; i++)
             {
                 levels[0].level_boxes[i] = level_1[i];
             }
 
-            for (int i = 0; i < LevelData::NUMBER_OF_BOXES; i++)
+            for (int i = 0; i < LevelData::number_of_boxes; i++)
             {
                 levels[1].level_boxes[i] = level_2[i];
             }
 
-            for (int i = 0; i < LevelData::NUMBER_OF_BOXES; i++)
+            for (int i = 0; i < LevelData::number_of_boxes; i++)
             {
                 levels[2].level_boxes[i] = level_3[i];
             }

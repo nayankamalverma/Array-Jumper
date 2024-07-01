@@ -46,11 +46,11 @@ namespace Level
 	}
 	int LevelService::getCurrentLevelNumber()
 	{
-		level_controller->getCurrentLevelNumber();
+		return  level_controller->getCurrentLevelNumber();
 	}
 	bool LevelService::isLastLevel()
 	{
-		level_controller->isLastLevel();
+		return level_controller->isLastLevel();
 	}
 	void LevelService::resetLevels()
 	{

@@ -49,7 +49,7 @@ namespace Level
 
 	 bool LevelController::isLastLevel()
 	 {
-		 level_model->isLastLevel();
+		 return level_model->isLastLevel();
 	 }
 
 	void LevelController::resetLevels()
