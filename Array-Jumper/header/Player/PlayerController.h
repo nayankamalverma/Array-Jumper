@@ -18,7 +18,6 @@ namespace Player
 		Event::EventService* event_service;
 
 		void readInput();
-		void resetPlayer();
 		void destroy();
 
 	public:
@@ -39,5 +38,7 @@ namespace Player
 		int getCurrentPosition();
 
 		void takeDamage();
+
+		void resetPlayer();
 	};
 }
