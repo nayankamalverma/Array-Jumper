@@ -19,9 +19,13 @@ namespace Gameplay
 		void update();
 		void render();
 
+		void gameWon();
 		void onPositionChanged(int position);
 		bool isEndBlock(BlockType value);
 
 		void onDeath();
+
+		bool isLastLevel();
+		void loadNextLevel();
 	};
 }

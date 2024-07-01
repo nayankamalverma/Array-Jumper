@@ -203,6 +203,7 @@
     <Media Include="assets\sounds\background_music.mp3" />
     <Media Include="assets\sounds\button_click_sound.wav" />
     <Media Include="assets\sounds\death.wav" />
+    <Media Include="assets\sounds\game_won_sound.wav" />
     <Media Include="assets\sounds\jump.wav" />
     <Media Include="assets\sounds\level_complete.wav" />
     <Media Include="assets\sounds\move.wav" />

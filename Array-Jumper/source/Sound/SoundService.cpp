@@ -32,6 +32,8 @@ namespace Sound
 			printf("Error loading background music file");
 		if (!buffer_level_complete.loadFromFile(Config::level_complete_sound_path))
 			printf("Error loading background music file");
+		if(!buffer_game_won.loadFromFile(Config::game_won_sound_path))
+			printf("Error loading game won music file");
 	}
 
 	void SoundService::playSound(SoundType soundType)
@@ -53,6 +55,8 @@ namespace Sound
 		case SoundType::LEVEL_COMPLETE:
 			sound_effect.setBuffer(buffer_level_complete);
 			break;
+		case SoundType::GAME_WON:
+			sound_effect.setBuffer(buffer_game_won);
 		default:
 			printf("Invalid sound type");
 			return;
