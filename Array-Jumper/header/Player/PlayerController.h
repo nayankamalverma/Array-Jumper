@@ -37,5 +37,7 @@ namespace Player
 		void jump(MovementDirection direction);
 
 		int getCurrentPosition();
+
+		void takeDamage();
 	};
 }

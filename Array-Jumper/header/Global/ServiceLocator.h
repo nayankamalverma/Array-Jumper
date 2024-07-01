@@ -3,6 +3,7 @@
 #include "../../header/Event/EventService.h"
 #include "../../header/UI/UIService.h"
 #include "../../header/Sound/SoundService.h""
+#include "../Gameplay/GameplayService.h"
 #include "../Level/LevelService.h"
 #include "../Player/PlayerService.h"
 
@@ -17,15 +18,16 @@ namespace Global
         UI::UIService* ui_service;
         Level::LevelService* level_service;
         Player::PlayerService* player_service;
-
-        ~ServiceLocator();
+        Gameplay::GameplayService* gameplay_service;
 
         void createServices();
         void clearAllServices();
 
     public:
         ServiceLocator();
-        static ServiceLocator* getInstance();
+    	~ServiceLocator();
+
+    	static ServiceLocator* getInstance();
 
         void initialize();
         void update();
@@ -37,6 +39,7 @@ namespace Global
         UI::UIService* getUIService();
     	Level::LevelService* getLevelService();
         Player::PlayerService* getPlayerService();
+        Gameplay::GameplayService* getGameplayService();
         
     };
 }

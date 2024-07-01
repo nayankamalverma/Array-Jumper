@@ -30,5 +30,7 @@ namespace Player
 		//playerState
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
+
+		void resetPlayer();
 	};
 }
