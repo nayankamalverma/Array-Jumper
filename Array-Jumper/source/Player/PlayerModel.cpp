@@ -46,5 +46,11 @@ namespace Player
 		current_position = new_position;
 	}
 
+	void PlayerModel::resetPlayer()
+	{
+		setCurrentPosition(0);
+		setPlayerState(PlayerState::ALIVE);
+	}
+
 
 }
