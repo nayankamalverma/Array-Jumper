@@ -46,11 +46,21 @@ namespace Player
 		current_position = new_position;
 	}
 
+	int PlayerModel::getCurrentLives() { return current_lives; }
+
+	void PlayerModel::decrementLife() { current_lives--; }
+
+
 	void PlayerModel::resetPlayer()
 	{
 		setCurrentPosition(0);
 		setPlayerState(PlayerState::ALIVE);
+		current_lives = max_lives;
 	}
+	  void PlayerModel::resetPosition()
+	  {
+		  current_position = 0;
+	  }
 
 
 }

@@ -2,12 +2,14 @@
 
 #include "../../header/Global/Config.h"
 #include "../../header/Global/ServiceLocator.h"
+#include "../../header/Main/GameService.h"
 #include "../../header/Player/PlayerView.h"
 #include "../../header/Player/PlayerModel.h"
 
 namespace Player
 {
 	using namespace Global;
+	using namespace Main;
 
 	PlayerController::PlayerController()
 	{
@@ -143,6 +145,12 @@ namespace Player
 		delete(player_view);
 	}
 
+	int PlayerController::getCurrentLives()
+	{
+		return player_model->getCurrentLives();
+	}
+
+
 	void PlayerController::resetPlayer()
 	{
 		player_model->resetPlayer();
@@ -150,9 +158,17 @@ namespace Player
 	}
 	void PlayerController::takeDamage()
 	{
-		resetPlayer();
+		player_model->decrementLife();
+		if (player_model->getCurrentLives() <= 0)
+			onDeath();
+		else
+			player_model->resetPosition();
 	}
 
-
+	void PlayerController::onDeath()
+	{
+		ServiceLocator::getInstance()->getGameplayService()->onDeath();
+		player_model->resetPlayer();
+	}
 
 }

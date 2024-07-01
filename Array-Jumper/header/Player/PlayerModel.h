@@ -13,6 +13,8 @@ namespace Player
 	{
 		int current_position;
 		PlayerState player_state;
+		const int max_lives = 3;
+		int current_lives;
 
 	public:
 
@@ -23,14 +25,16 @@ namespace Player
 		void update();
 		void render();
 
-		//getter setter
 		//position
 		int getCurrentPosition();
 		void setCurrentPosition(int new_position);
+		void resetPosition();
 		//playerState
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
-
+		//lives
+		int getCurrentLives();
+		void decrementLife();
 		void resetPlayer();
 	};
 }
