@@ -3,10 +3,12 @@
 
 namespace Gameplay
 {
+	using namespace Level;
 	class GameplayController
 	{
 		void processObstacle();
-		bool isObstacle(Level::BlockType value);
+		bool isObstacle(BlockType value);
+		void processEndBlock();
 
 	public:
 		GameplayController();
@@ -17,5 +19,6 @@ namespace Gameplay
 		void render();
 
 		void onPositionChanged(int position);
+		bool isEndBlock(BlockType value);
 	};
 }
